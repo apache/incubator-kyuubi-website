@@ -45,10 +45,9 @@ Community
 <div class=childNavContainer>
 <ul class=childNav>
 <li><a class=childNavLink href=https://www.apache.org/foundation/policies/conduct>Code of Conduct</a></li>
+<li><a class=childNavLink href=/become_committer.html>Become A Committer</a></li>
 <li><a class=childNavLink href=/improvement-proposals.html>Improvement Proposals (KPIP)</a></li>
-<li><a class=childNavLink href=/issue_tracking.html>Issue Tracker</a></li>
-<li><a class=childNavLink href=/mailing_lists.html>Mailing Lists</a></li>
-<li><a class=childNavLink href=/pull_request.html>Pull Request</a></li>
+<li><a class=childNavLink href=/mailing_lists.html>Join the Mailing Lists</a></li>
 </ul>
 </div>
 </li>
@@ -59,6 +58,8 @@ Development
 </a>
 <div class=childNavContainer>
 <ul class=childNav>
+<li><a class=childNavLink href=/issue_tracking.html>Issue Tracker</a></li>
+<li><a class=childNavLink href=/pull_request.html>Pull Request</a></li>
 <li><a class=childNavLink href=/developer-tools.html>Useful Developer Tools</a></li>
 <li><a class=childNavLink href=/version_control.html>Version Control</a></li>
 </ul>
@@ -125,10 +126,9 @@ Community
 <div class=childNavContainer>
 <ul class=childNav>
 <li><a class=childNavLink href=https://www.apache.org/foundation/policies/conduct>Code of Conduct</a></li>
+<li><a class=childNavLink href=/become_committer.html>Become A Committer</a></li>
 <li><a class=childNavLink href=/improvement-proposals.html>Improvement Proposals (KPIP)</a></li>
-<li><a class=childNavLink href=/issue_tracking.html>Issue Tracker</a></li>
-<li><a class=childNavLink href=/mailing_lists.html>Mailing Lists</a></li>
-<li><a class=childNavLink href=/pull_request.html>Pull Request</a></li>
+<li><a class=childNavLink href=/mailing_lists.html>Join the Mailing Lists</a></li>
 </ul>
 </div>
 </li>
@@ -139,6 +139,8 @@ Development
 </a>
 <div class=childNavContainer>
 <ul class=childNav>
+<li><a class=childNavLink href=/issue_tracking.html>Issue Tracker</a></li>
+<li><a class=childNavLink href=/pull_request.html>Pull Request</a></li>
 <li><a class=childNavLink href=/developer-tools.html>Useful Developer Tools</a></li>
 <li><a class=childNavLink href=/version_control.html>Version Control</a></li>
 </ul>
@@ -172,12 +174,12 @@ Apache Software Foundation
 </nav>
 <script>var phoneBtn=document.getElementById('phoneBtn'),mask=document.getElementById('nav_mask'),header_mobile,header;phoneBtn.addEventListener('click',function(b){var a=mask.style.display!=='none';phoneBtn.className=a?'phoneBtn':'phoneBtn closeBtn',mask.style.display=a?'none':' block'}),mask.addEventListener('click',function(a){phoneBtn.className='phoneBtn',mask.style.display='none'}),header_mobile=document.getElementById('header_mobile'),header_mobile.addEventListener('click',function(a){var c=a.target.className,b,d;c==="navLink navLinkWithChild"&&(b=a.target.parentNode,d=b.className!=='navItem',b.className=d?'navItem':'navItem openNavItem')}),header=document.getElementById('header'),window.onscroll=function(){var a=document.documentElement.scrollLeft||document.body.scrollLeft;header.style.left=-a+'px'}</script>
 <div class=container>
-<h1>Contributing</h1>
-<h1 id=review-pull-requests>Review pull requests</h1>
+<h1>Guide for Pull Requests</h1>
+<h2 id=review-pull-requests>Review pull requests</h2>
 <p>Kyuubi encourage to help review pull requests of other developers which makes code more robust.
 The review guide can see <a href=https://google.github.io/eng-practices/review/>Google’s Engineering Practices documentation</a>.</p>
-<h1 id=submit-your-pull-requests>Submit your pull requests</h1>
-<h2 id=before>Before</h2>
+<h2 id=submit-your-pull-requests>Submit your pull requests</h2>
+<h3 id=before>Before</h3>
 <p>Before proceeding, it&rsquo;s better to search the issues and pull requests history first. Likely, the problem or request has been discussed.</p>
 <p>After checking, you can create a new issue to describe what want to do, and about issues, we have rich types to
 choose, see <a href=https://github.com/apache/incubator-kyuubi/issues/new/choose>here</a>.</p>
@@ -207,7 +209,7 @@ As developers, our responsibility is to fix issues or implement new features and
 A developer can convey proposed code changes and their purposes either through detailed PR descriptions.
 They&rsquo;re also a great way to help track things that should be done for every change, such as testing, adding unit tests, and updating documentation in the git log.
 See <a href=https://github.com/apache/incubator-kyuubi/blob/master/.github/PULL_REQUEST_TEMPLATE>Pull Request Template</a>.</p>
-<h2 id=after>After</h2>
+<h3 id=after>After</h3>
 <p>It may take some time to wait other developer to review. Feel free to ping any committer who has worked on the similar area.
 In general, You can find out the right people to review your code through git commit history.</p>
 <p>One more thing, Kyuubi leverage github action to cover unit test and integration test, so please make sure your pull request&rsquo;s
