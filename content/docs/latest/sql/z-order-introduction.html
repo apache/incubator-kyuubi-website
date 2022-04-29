@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>3. Z-order introduction &mdash; Kyuubi 1.5.0-incubating documentation</title>
+  <title>3. Z-order introduction &mdash; Kyuubi 1.5.1-incubating documentation</title>
   
 
   
@@ -352,18 +352,18 @@
 <p>If you want to optimize the history data of a table, the <code class="docutils literal notranslate"><span class="pre">OPTIMIZE</span> <span class="pre">...</span></code> syntax is good to go. Due to Spark SQL doesn’t support read and overwrite same datasource table, the syntax can only support to optimize Hive table.</p>
 <div class="section" id="syntax">
 <h4>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="n">OPTIMIZE</span> <span class="k">table_name</span> <span class="p">[</span><span class="k">WHERE</span> <span class="n">predicate</span><span class="p">]</span> <span class="n">ZORDER</span> <span class="k">BY</span> <span class="n">col_name1</span> <span class="p">[,</span> <span class="p">...]</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="n">OPTIMIZE</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="n">predicate</span><span class="p">]</span><span class="w"> </span><span class="n">ZORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">col_name1</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="p">...]</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Note that, the <code class="docutils literal notranslate"><span class="pre">predicate</span></code> only supports partition spec.</p>
 </div>
 <div class="section" id="examples">
 <h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="n">OPTIMIZE</span> <span class="n">t1</span> <span class="n">ZORDER</span> <span class="k">BY</span> <span class="n">c3</span><span class="p">;</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="n">OPTIMIZE</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="n">ZORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">c3</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">OPTIMIZE</span> <span class="n">t1</span> <span class="n">ZORDER</span> <span class="k">BY</span> <span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">;</span>
+<span class="n">OPTIMIZE</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="n">ZORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">OPTIMIZE</span> <span class="n">t1</span> <span class="k">WHERE</span> <span class="k">day</span> <span class="o">=</span> <span class="s1">&#39;2021-12-01&#39;</span> <span class="n">ZORDER</span> <span class="k">BY</span> <span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">;</span>
+<span class="n">OPTIMIZE</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2021-12-01&#39;</span><span class="w"> </span><span class="n">ZORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -371,7 +371,7 @@
 <div class="section" id="optimize-incremental-data">
 <h3><span class="section-number">3.2.2. </span>Optimize incremental data<a class="headerlink" href="#optimize-incremental-data" title="Permalink to this headline">¶</a></h3>
 <p>Kyuubi supports optimize a table automatically for incremental data. e.g., time partitioned table. The only things you need to do is adding Kyuubi properties into the target table properties:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">t1</span> <span class="k">SET</span> <span class="n">TBLPROPERTIES</span><span class="p">(</span><span class="s1">&#39;kyuubi.zorder.enabled&#39;</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">,</span><span class="s1">&#39;kyuubi.zorder.cols&#39;</span><span class="o">=</span><span class="s1">&#39;c1,c2&#39;</span><span class="p">);</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">TBLPROPERTIES</span><span class="p">(</span><span class="s1">&#39;kyuubi.zorder.enabled&#39;</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">,</span><span class="s1">&#39;kyuubi.zorder.cols&#39;</span><span class="o">=</span><span class="s1">&#39;c1,c2&#39;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -379,11 +379,11 @@
 <li><p>the key <code class="docutils literal notranslate"><span class="pre">kyuubi.zorder.cols</span></code> decide which columns are used to optimize by z-order.</p></li>
 </ul>
 <p>Kyuubi will detect the properties and optimize SQL using z-order during SQL compilation, so you can enjoy z-order with all writing table command like:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">t1</span> <span class="n">PARTITION</span><span class="p">()</span> <span class="p">...;</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="n">PARTITION</span><span class="p">()</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
 
-<span class="k">INSERT</span> <span class="n">OVERWRITE</span> <span class="k">TABLE</span> <span class="n">t1</span> <span class="n">PARTITION</span><span class="p">()</span> <span class="p">...;</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="n">OVERWRITE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="n">PARTITION</span><span class="p">()</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
 
-<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">t1</span> <span class="k">AS</span> <span class="k">SELECT</span> <span class="p">...;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

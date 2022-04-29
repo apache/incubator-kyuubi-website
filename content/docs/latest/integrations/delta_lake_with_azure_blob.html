@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>3. Kyuubi On Delta Lake With Microsoft Azure Blob Storage &mdash; Kyuubi 1.5.0-incubating documentation</title>
+  <title>3. Kyuubi On Delta Lake With Microsoft Azure Blob Storage &mdash; Kyuubi 1.5.1-incubating documentation</title>
   
 
   
@@ -481,25 +481,25 @@ So, you can check the registration details in zookeeper path ’/kyuubi_USER/ano
 <h2><span class="section-number">3.4. </span>Dealing Delta Lake Data By Using Kyuubi Examples<a class="headerlink" href="#dealing-delta-lake-data-by-using-kyuubi-examples" title="Permalink to this headline">¶</a></h2>
 <p>Operate delta-lake data through SQL:<br />1.Create Table</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="c1">-- Create or replace table with path</span>
-<span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">TABLE</span> <span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span> <span class="p">(</span>
-  <span class="nb">date</span> <span class="nb">DATE</span><span class="p">,</span>
-  <span class="n">eventId</span> <span class="n">STRING</span><span class="p">,</span>
-  <span class="n">eventType</span> <span class="n">STRING</span><span class="p">,</span>
-  <span class="k">data</span> <span class="n">STRING</span><span class="p">)</span>
-<span class="k">USING</span> <span class="n">DELTA</span>
-<span class="n">PARTITIONED</span> <span class="k">BY</span> <span class="p">(</span><span class="nb">date</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="nb">date</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">eventId</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">eventType</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="k">data</span><span class="w"> </span><span class="n">STRING</span><span class="p">)</span><span class="w"></span>
+<span class="k">USING</span><span class="w"> </span><span class="n">DELTA</span><span class="w"></span>
+<span class="n">PARTITIONED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">(</span><span class="nb">date</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>2.Insert Data<br />Append Mode:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span> <span class="p">(</span>
-    <span class="nb">date</span><span class="p">,</span>
-    <span class="n">eventId</span><span class="p">,</span>
-    <span class="n">eventType</span><span class="p">,</span>
-    <span class="k">data</span><span class="p">)</span>
-<span class="k">VALUES</span> 
-    <span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="s1">&#39;001&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="s1">&#39;002&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="s1">&#39;003&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">);</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="nb">date</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">eventId</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">eventType</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">data</span><span class="p">)</span><span class="w"></span>
+<span class="k">VALUES</span><span class="w"> </span>
+<span class="w">    </span><span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="s1">&#39;001&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="s1">&#39;002&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="s1">&#39;003&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Result:</p>
@@ -513,14 +513,14 @@ So, you can check the registration details in zookeeper path ’/kyuubi_USER/ano
 </pre></div>
 </div>
 <p>Overwrite Mode:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="n">OVERWRITE</span> <span class="k">TABLE</span> <span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span><span class="p">(</span>
-    <span class="nb">date</span><span class="p">,</span>
-    <span class="n">eventId</span><span class="p">,</span>
-    <span class="n">eventType</span><span class="p">,</span>
-    <span class="k">data</span><span class="p">)</span>
-<span class="k">VALUES</span> 
-<span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="s1">&#39;001&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;hello kyuubi&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="s1">&#39;002&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;hello kyuubi&#39;</span><span class="p">);</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">INSERT</span><span class="w"> </span><span class="n">OVERWRITE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="nb">date</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">eventId</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">eventType</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">data</span><span class="p">)</span><span class="w"></span>
+<span class="k">VALUES</span><span class="w"> </span>
+<span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="s1">&#39;001&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;hello kyuubi&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="n">now</span><span class="p">(),</span><span class="s1">&#39;002&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;hello kyuubi&#39;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Result:</p>
@@ -533,7 +533,7 @@ So, you can check the registration details in zookeeper path ’/kyuubi_USER/ano
 </pre></div>
 </div>
 <p>Delete Table Data:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">delete</span> <span class="k">from</span> <span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span> <span class="k">where</span> <span class="n">eventId</span> <span class="o">=</span> <span class="mi">002</span><span class="p">;</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">eventId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">002</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Result:</p>
@@ -545,9 +545,9 @@ So, you can check the registration details in zookeeper path ’/kyuubi_USER/ano
 </pre></div>
 </div>
 <p>Update table data:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">UPDATE</span> <span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span>
-<span class="k">SET</span> <span class="k">data</span> <span class="o">=</span> <span class="s1">&#39;This is a test for update data.&#39;</span>
-<span class="k">WHERE</span> <span class="n">eventId</span> <span class="o">=</span> <span class="mi">001</span><span class="p">;</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">UPDATE</span><span class="w"> </span><span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span><span class="w"></span>
+<span class="k">SET</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;This is a test for update data.&#39;</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">eventId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">001</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Result:</p>
@@ -559,7 +559,7 @@ So, you can check the registration details in zookeeper path ’/kyuubi_USER/ano
 </pre></div>
 </div>
 <p>Select table data:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span><span class="p">;</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">delta</span><span class="p">.</span><span class="o">`</span><span class="n">wasbs</span><span class="p">:</span><span class="o">//</span><span class="mi">1000</span><span class="o">@</span><span class="n">azure_account</span><span class="p">.</span><span class="nb">blob</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">alexDemo20211129</span><span class="o">`</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Result:</p>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>1. Kyuubi Authentication Mechanism &mdash; Kyuubi 1.5.0-incubating documentation</title>
+  <title>1. Kyuubi Authentication Mechanism &mdash; Kyuubi 1.5.1-incubating documentation</title>
   
 
   
@@ -227,7 +227,7 @@ For other secured services that this user wants to interact with, he/she also ne
 </thead>
 <tbody>
 <tr>
-<td>kyuubi.authentication</td>
+<td><code>kyuubi.authentication</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>NONE</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>Client authentication types.<ul> <li>NOSASL: raw transport.</li> <li>NONE: no authentication check.</li> <li>KERBEROS: Kerberos/GSSAPI authentication.</li> <li>LDAP: Lightweight Directory Access Protocol authentication.</li></ul></div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
@@ -244,31 +244,31 @@ For other secured services that this user wants to interact with, he/she also ne
 </thead>
 <tbody>
 <tr>
-<td>kyuubi.authentication</td>
+<td><code>kyuubi.authentication</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>NONE</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>Client authentication types.<ul> <li>NOSASL: raw transport.</li> <li>NONE: no authentication check.</li> <li>KERBEROS: Kerberos/GSSAPI authentication.</li> <li>LDAP: Lightweight Directory Access Protocol authentication.</li></ul></div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
 </tr>
 <tr>
-<td>kyuubi.authentication<br>.ldap.base.dn</td>
+<td><code>kyuubi.authentication.ldap.base.dn</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>&lt;undefined&gt;</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>LDAP base DN.</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
 </tr>
 <tr>
-<td>kyuubi.authentication<br>.ldap.domain</td>
+<td><code>kyuubi.authentication.ldap.domain</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>&lt;undefined&gt;</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>LDAP base DN.</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
 </tr>
 <tr>
-<td>kyuubi.authentication<br>.ldap.url</td>
+<td><code>kyuubi.authentication.ldap.url</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>&lt;undefined&gt;</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>SPACE character separated LDAP connection URL(s).</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
 </tr>
 <tr>
-<td>kyuubi.authentication<br>.sasl.qop</td>
+<td><code>kyuubi.authentication.sasl.qop</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>auth</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>Sasl QOP enable higher levels of protection for Kyuubi communication with clients.<ul> <li>auth - authentication only (default)</li> <li>auth-int - authentication plus integrity protection</li> <li>auth-conf - authentication plus integrity and confidentiality protection. This is applicable only if Kyuubi is configured to use Kerberos authentication.</li> </ul></div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
@@ -295,25 +295,25 @@ each principal shares a secret, such as a password, with the KDC.</p>
 </thead>
 <tbody>
 <tr>
-<td>kyuubi.kinit<br>.principal</td>
+<td><code>kyuubi.kinit.principal</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>&lt;undefined&gt;</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>Name of the Kerberos principal.</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
 </tr>
 <tr>
-<td>kyuubi.kinit.keytab</td>
+<td><code>kyuubi.kinit.keytab</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>&lt;undefined&gt;</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>Location of Kyuubi server's keytab.</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
 </tr>
 <tr>
-<td>kyuubi.kinit.interval</td>
+<td><code>kyuubi.kinit.interval</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>PT1H</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>How often will Kyuubi server run <code>kinit -kt [keytab] [principal]</code> to renew the local Kerberos credentials cache</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
 </tr>
 <tr>
-<td>kyuubi.kinit.max<br>.attempts</td>
+<td><code>kyuubi.kinit.max.attempts</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>10</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>How many times will <code>kinit</code> process retry</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>

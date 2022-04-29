@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>2. Getting Started With Kyuubi on kubernetes &mdash; Kyuubi 1.5.0-incubating documentation</title>
+  <title>2. Getting Started With Kyuubi on kubernetes &mdash; Kyuubi 1.5.1-incubating documentation</title>
   
 
   
@@ -245,7 +245,7 @@ REVISION: <span class="m">1</span>
 TEST SUITE: None
 NOTES:
 Get kyuubi expose URL by running these commands:
-  <span class="nb">export</span> <span class="nv">NODE_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl get --namespace kyuubi -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[0].nodePort}&quot;</span> services kyuubi-helm-nodeport<span class="k">)</span>
+  <span class="nb">export</span> <span class="nv">NODE_PORT</span><span class="o">=</span><span class="k">$(</span>kubectl get --namespace kyuubi -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[0].nodePort}&quot;</span> services kyuubi-svc<span class="k">)</span>
   <span class="nb">export</span> <span class="nv">NODE_IP</span><span class="o">=</span><span class="k">$(</span>kubectl get nodes --namespace kyuubi -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[0].status.addresses[0].address}&quot;</span><span class="k">)</span>
   <span class="nb">echo</span> <span class="nv">$NODE_IP</span>:<span class="nv">$NODE_PORT</span>
 </pre></div>
@@ -264,29 +264,29 @@ Get kyuubi expose URL by running these commands:
 <div class="section" id="edit-server-config">
 <h4>Edit server config<a class="headerlink" href="#edit-server-config" title="Permalink to this headline">¶</a></h4>
 <p>Modify <code class="docutils literal notranslate"><span class="pre">values.yaml</span></code> under <code class="docutils literal notranslate"><span class="pre">${KYUUBI_HOME}/docker/helm</span></code>:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kyuubi server numbers</span>
-<span class="nt">replicaCount</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kyuubi server numbers</span><span class="w"></span>
+<span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
 
-<span class="nt">image</span><span class="p">:</span>
-  <span class="nt">repository</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apache/kyuubi</span>
-  <span class="nt">pullPolicy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Always</span>
-  <span class="c1"># Overrides the image tag whose default is the chart appVersion.</span>
-  <span class="nt">tag</span><span class="p">:</span> <span class="s">&quot;master-snapshot&quot;</span>
+<span class="nt">image</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apache/kyuubi</span><span class="w"></span>
+<span class="w">  </span><span class="nt">pullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Always</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># Overrides the image tag whose default is the chart appVersion.</span><span class="w"></span>
+<span class="w">  </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;master-snapshot&quot;</span><span class="w"></span>
 
-<span class="nt">server</span><span class="p">:</span>
-  <span class="nt">bind</span><span class="p">:</span>
-    <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.0.0.0</span>
-    <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10009</span>
-  <span class="nt">conf</span><span class="p">:</span>
-    <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/opt/kyuubi/conf</span>
+<span class="nt">server</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">bind</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0.0.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10009</span><span class="w"></span>
+<span class="w">  </span><span class="nt">conf</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/opt/kyuubi/conf</span><span class="w"></span>
 
-<span class="nt">service</span><span class="p">:</span>
-  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">NodePort</span>
-  <span class="c1"># The default port limit of kubernetes is 30000-32767</span>
-  <span class="c1"># to change:</span>
-  <span class="c1">#   vim kube-apiserver.yaml (usually under path: /etc/kubernetes/manifests/)</span>
-  <span class="c1">#   add or change line &#39;service-node-port-range=1-32767&#39; under kube-apiserver</span>
-  <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30009</span>
+<span class="nt">service</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NodePort</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># The default port limit of kubernetes is 30000-32767</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># to change:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">#   vim kube-apiserver.yaml (usually under path: /etc/kubernetes/manifests/)</span><span class="w"></span>
+<span class="w">  </span><span class="c1">#   add or change line &#39;service-node-port-range=1-32767&#39; under kube-apiserver</span><span class="w"></span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30009</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

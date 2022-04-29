@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>7. Getting Started with Kyuubi and Cloudera Hue &mdash; Kyuubi 1.5.0-incubating documentation</title>
+  <title>7. Getting Started with Kyuubi and Cloudera Hue &mdash; Kyuubi 1.5.1-incubating documentation</title>
   
 
   
@@ -261,28 +261,28 @@ there are several known limitations of network, and you can find
 <ol class="simple">
 <li><p>Modify the <code class="docutils literal notranslate"><span class="pre">hue.ini</span></code></p></li>
 </ol>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[beeswax]</span>
-  <span class="c1"># Kyuubi 1.1.x support thrift version from 1 to 10</span>
-  <span class="na">thrift_version</span><span class="o">=</span><span class="s">7</span>
-  <span class="c1"># change to your username to avoid permissions issue for local test</span>
-  <span class="na">auth_username</span><span class="o">=</span><span class="s">chengpan</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[beeswax]</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># Kyuubi 1.1.x support thrift version from 1 to 10</span><span class="w"></span>
+<span class="w">  </span><span class="na">thrift_version</span><span class="o">=</span><span class="s">7</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># change to your username to avoid permissions issue for local test</span><span class="w"></span>
+<span class="w">  </span><span class="na">auth_username</span><span class="o">=</span><span class="s">chengpan</span><span class="w"></span>
 
-<span class="k">[notebook]</span>
-  <span class="k">[[interpreters]]</span>
-    <span class="k">[[[sql]]]</span>
-      <span class="na">name</span><span class="o">=</span><span class="s">SparkSQL</span>
-      <span class="na">interface</span><span class="o">=</span><span class="s">hiveserver2</span>
-      
-<span class="k">[spark]</span>
-  <span class="c1"># Host of the Spark Thrift Server</span>
-  <span class="c1"># For macOS users, use docker.for.mac.host.internal to access host network</span>
-  <span class="na">sql_server_host</span><span class="o">=</span><span class="s">docker.for.mac.host.internal</span>
+<span class="k">[notebook]</span><span class="w"></span>
+<span class="w">  </span><span class="k">[[interpreters]]</span><span class="w"></span>
+<span class="w">    </span><span class="k">[[[sql]]]</span><span class="w"></span>
+<span class="w">      </span><span class="na">name</span><span class="o">=</span><span class="s">SparkSQL</span><span class="w"></span>
+<span class="w">      </span><span class="na">interface</span><span class="o">=</span><span class="s">hiveserver2</span><span class="w"></span>
+<span class="w">      </span>
+<span class="k">[spark]</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># Host of the Spark Thrift Server</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># For macOS users, use docker.for.mac.host.internal to access host network</span><span class="w"></span>
+<span class="w">  </span><span class="na">sql_server_host</span><span class="o">=</span><span class="s">docker.for.mac.host.internal</span><span class="w"></span>
 
-  <span class="c1"># Port of the Spark Thrift Server</span>
-  <span class="na">sql_server_port</span><span class="o">=</span><span class="s">10009</span>
-  
-<span class="c1"># other configurations</span>
-<span class="na">...</span>
+<span class="w">  </span><span class="c1"># Port of the Spark Thrift Server</span><span class="w"></span>
+<span class="w">  </span><span class="na">sql_server_port</span><span class="o">=</span><span class="s">10009</span><span class="w"></span>
+<span class="w">  </span>
+<span class="c1"># other configurations</span><span class="w"></span>
+<span class="na">...</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

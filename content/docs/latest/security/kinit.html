@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>2. Kinit Auxiliary Service &mdash; Kyuubi 1.5.0-incubating documentation</title>
+  <title>2. Kinit Auxiliary Service &mdash; Kyuubi 1.5.1-incubating documentation</title>
   
 
   
@@ -267,25 +267,25 @@ For example, <code class="docutils literal notranslate"><span class="pre">/tmp/k
 </thead>
 <tbody>
 <tr>
-<td>kyuubi.kinit<br>.principal</td>
+<td><code>kyuubi.kinit.principal</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>&lt;undefined&gt;</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>Name of the Kerberos principal.</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
 </tr>
 <tr>
-<td>kyuubi.kinit.keytab</td>
+<td><code>kyuubi.kinit.keytab</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>&lt;undefined&gt;</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>Location of Kyuubi server's keytab.</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
 </tr>
 <tr>
-<td>kyuubi.kinit.interval</td>
+<td><code>kyuubi.kinit.interval</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>PT1H</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>How often will Kyuubi server run <code>kinit -kt [keytab] [principal]</code> to renew the local Kerberos credentials cache</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>
 </tr>
 <tr>
-<td>kyuubi.kinit.max<br>.attempts</td>
+<td><code>kyuubi.kinit.max.attempts</code></td>
 <td><div style='width: 80pt;word-wrap: break-word;white-space: normal'>10</div></td>
 <td><div style='width: 200pt;word-wrap: break-word;white-space: normal'>How many times will <code>kinit</code> process retry</div></td>
 <td><div style='width: 20pt'>1.0.0</div></td>

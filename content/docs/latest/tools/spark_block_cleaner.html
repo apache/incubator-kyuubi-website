@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>1. Kubernetes Tools Spark Block Cleaner &mdash; Kyuubi 1.5.0-incubating documentation</title>
+  <title>1. Kubernetes Tools Spark Block Cleaner &mdash; Kyuubi 1.5.1-incubating documentation</title>
   
 
   
@@ -252,53 +252,53 @@
 <p>You need to modify the <code class="docutils literal notranslate"><span class="pre">${KYUUBI_HOME}/tools/spark-block-cleaner/kubernetes/spark-block-cleaner.yml</span></code> to fit your current environment.</p>
 <p>In Kyuubi tools, we recommend using <code class="docutils literal notranslate"><span class="pre">DaemonSet</span></code> to start, and we offer default yaml file in daemonSet way.</p>
 <p>Base file structure:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">apiVersion</span>
-<span class="l l-Scalar l-Scalar-Plain">kind</span>
-<span class="l l-Scalar l-Scalar-Plain">metadata</span>
-  <span class="l l-Scalar l-Scalar-Plain">name</span>
-  <span class="l l-Scalar l-Scalar-Plain">namespace</span>
-<span class="l l-Scalar l-Scalar-Plain">spec</span>
-  <span class="l l-Scalar l-Scalar-Plain">select</span>
-  <span class="l l-Scalar l-Scalar-Plain">template</span>
-    <span class="l l-Scalar l-Scalar-Plain">metadata</span>
-    <span class="l l-Scalar l-Scalar-Plain">spce</span>
-      <span class="l l-Scalar l-Scalar-Plain">containers</span>
-      <span class="l l-Scalar l-Scalar-Plain">- image</span>
-      <span class="l l-Scalar l-Scalar-Plain">- volumeMounts</span>
-      <span class="l l-Scalar l-Scalar-Plain">- env</span>
-    <span class="l l-Scalar l-Scalar-Plain">volumes</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">kind</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">metadata</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">namespace</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">spec</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">select</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">template</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">spce</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">containers</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">- image</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">- volumeMounts</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">- env</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You can use affect the performance of Spark Block Cleaner through configure parameters in containers env part of <code class="docutils literal notranslate"><span class="pre">spark-block-cleaner.yml</span></code>.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">env</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CACHE_DIRS</span>
-    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/data/data1,/data/data2</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">FILE_EXPIRED_TIME</span>
-    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">604800</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DEEP_CLEAN_FILE_EXPIRED_TIME</span>
-    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">432000</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">FREE_SPACE_THRESHOLD</span>
-    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SCHEDULE_INTERVAL</span>
-    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3600</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CACHE_DIRS</span><span class="w"></span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/data1,/data/data2</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FILE_EXPIRED_TIME</span><span class="w"></span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">604800</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DEEP_CLEAN_FILE_EXPIRED_TIME</span><span class="w"></span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">432000</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FREE_SPACE_THRESHOLD</span><span class="w"></span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SCHEDULE_INTERVAL</span><span class="w"></span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3600</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The most important thing, configure volumeMounts and volumes corresponding to Spark local-dirs.</p>
 <p>For example, Spark use /spark/shuffle1 as local-dir, you can configure like:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">volumes</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">block-files-dir-1</span>
-    <span class="nt">hostPath</span><span class="p">:</span>
-      <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/spark/shuffle1</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">block-files-dir-1</span><span class="w"></span>
+<span class="w">    </span><span class="nt">hostPath</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/spark/shuffle1</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">volumeMounts</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">block-files-dir-1</span>
-    <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/data/data1</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">block-files-dir-1</span><span class="w"></span>
+<span class="w">    </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/data1</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">env</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CACHE_DIRS</span>
-    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/data/data1</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CACHE_DIRS</span><span class="w"></span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/data1</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

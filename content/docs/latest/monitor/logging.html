@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>1. Monitoring Kyuubi - Logging System &mdash; Kyuubi 1.5.0-incubating documentation</title>
+  <title>1. Monitoring Kyuubi - Logging System &mdash; Kyuubi 1.5.1-incubating documentation</title>
   
 
   
@@ -300,13 +300,13 @@ $ <span class="nv">KYUUBI_LOG_DIR</span><span class="o">=</span>/Users/kentyao/t
 <h4>Custom Log4j Settings<a class="headerlink" href="#custom-log4j-settings" title="Permalink to this headline">¶</a></h4>
 <p>Taking control of <code class="docutils literal notranslate"><span class="pre">$KYUUBI_HOME/conf/log4j.properties</span></code> will also give us the ability of customizing server logging as we want.</p>
 <p>For example, we can disable the console appender and enable the file appender like,</p>
-<div class="highlight-properties notranslate"><div class="highlight"><pre><span></span><span class="na">log4j.rootCategory</span><span class="o">=</span><span class="s">INFO, FA</span>
-<span class="na">log4j.appender.FA</span><span class="o">=</span><span class="s">org.apache.log4j.FileAppender</span>
-<span class="na">log4j.appender.FA.append</span><span class="o">=</span><span class="s">false</span>
-<span class="na">log4j.appender.FA.file</span><span class="o">=</span><span class="s">log/dummy.log</span>
-<span class="na">log4j.appender.FA.layout</span><span class="o">=</span><span class="s">org.apache.log4j.PatternLayout</span>
-<span class="na">log4j.appender.FA.layout.ConversionPattern</span><span class="o">=</span><span class="s">%d{HH:mm:ss.SSS} %t %p %c{2}: %m%n</span>
-<span class="na">log4j.appender.FA.Threshold</span><span class="o">=</span><span class="s">DEBUG</span>
+<div class="highlight-properties notranslate"><div class="highlight"><pre><span></span><span class="na">log4j.rootCategory</span><span class="o">=</span><span class="s">INFO, FA</span><span class="w"></span>
+<span class="na">log4j.appender.FA</span><span class="o">=</span><span class="s">org.apache.log4j.FileAppender</span><span class="w"></span>
+<span class="na">log4j.appender.FA.append</span><span class="o">=</span><span class="s">false</span><span class="w"></span>
+<span class="na">log4j.appender.FA.file</span><span class="o">=</span><span class="s">log/dummy.log</span><span class="w"></span>
+<span class="na">log4j.appender.FA.layout</span><span class="o">=</span><span class="s">org.apache.log4j.PatternLayout</span><span class="w"></span>
+<span class="na">log4j.appender.FA.layout.ConversionPattern</span><span class="o">=</span><span class="s">%d{HH:mm:ss.SSS} %t %p %c{2}: %m%n</span><span class="w"></span>
+<span class="na">log4j.appender.FA.Threshold</span><span class="o">=</span><span class="s">DEBUG</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Then everything goes to <code class="docutils literal notranslate"><span class="pre">log/dummy.log</span></code>.</p>
