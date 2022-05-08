@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on Apache Kyuubi</title><link>https://kyuubi.apache.org/zh/release.html</link><description>Recent content in Releases on Apache Kyuubi</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Copyright © 2021-{year}</copyright><lastBuildDate>Thu, 21 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kyuubi.apache.org/zh/release/index.xml" rel="self" type="application/rss+xml"/><item><title>发布记录 - 1.5.1-incubating</title><link>https://kyuubi.apache.org/zh/release/1.5.1-incubating.html</link><pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.5.1-incubating.html</guid><description>更改列表 [KYUUBI #2354] Fix NPE in process builder log capture thread [KYUUBI #2296] Fix operation log file handler leak [KYUUBI #2266] The default value of frontend.connection.url.use.hostname should be set to true to be consistent with previous versions [KYUUBI #2255]The engine state of Spark&amp;rsquo;s EngineEvent is hardcoded with 0 [KYUUBI #2008][FOLLOWUP] Support engine type and subdomain in kyuubi-ctl [KYUUBI #2156][FOLLOWUP] Fix configuration format in document [KYUUBI #2156] Change log to reflect exactly why getting token failed [KYUUBI #2134] Respect Spark bundled log4j in extension modules [KYUUBI #2150] [DOCS] Fix Getting Started With Kyuubi on Kubernetes 致谢 最后但同样重要的是，如果没有以下贡献者，该版本是不可能发布的：</description></item><item><title>发布记录 - 1.5.0-incubating</title><link>https://kyuubi.apache.org/zh/release/1.5.0-incubating.html</link><pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.5.0-incubating.html</guid><description>重大更新 支持 Flink SQL 引擎 (Beta) 支持 Trino/ Presto 引擎 (Beta) 支持为 Spark SQL 引擎运行 Scala 将 Hive 服务 RPC 协议升级到 3.1.2 引擎启动过程默认切换到异步 将 Session Conf Provider 添加为 Developer API 正确性 - 修复 Spark SQL 的浮点精度损失 从 log4j1 迁移到 log4j2 更改列表 [KYUUBI #1936][FOLLOWUP] Send credentials when opening session and wait for completion [KYUUBI #2115][1.5] Update license and enhance collect_licenses script [KYUUBI #2125] closeSession should avoid sending RPC after openSession fails [KYUUBI #2103] [1.</description></item><item><title>Apache Kyuubi(Incubating) 1.4.1-incubating 发布记录</title><link>https://kyuubi.apache.org/zh/release/1.4.1-incubating.html</link><pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.4.1-incubating.html</guid><description>大家好，
+Apache Kyuubi (Incubating) 1.4.1-incubating 现已发布。它是一个维护版本，包含基于 branch-1.4 的稳定性修复。主要修复事件日志的一些问题。
+Apache Kyuubi (Incubating) 是一个用于大规模数据处理和分析的分布式多租户 JDBC 服务，构建在 Apache Spark 之上，旨在支持更多引擎（如 Apache Flink）。请参考 Apache Kyuubi (Incubating) 了解更多。
+要下载 Apache Kyuubi (Incubating) 1.4.1-incubating，请访问 downloads page.
+重大更新 [KYUUBI #1449] Fix when KyuubiServer initialize fail but not exit
+[KYUUBI #1458] Delta lake table columns won&amp;rsquo;t show up in DBeaver.
+[KYUUBI #1473] Exit gracefully when engine idle
+[KYUUBI #1567] Expose HADOOP_CONF_DIR to Kyuubi beeline to fix &amp;ldquo;GSS initiate failed&amp;rdquo; error</description></item><item><title>Apache Kyuubi(Incubating) 1.4.0-incubating 发布记录</title><link>https://kyuubi.apache.org/zh/release/1.4.0-incubating.html</link><pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.4.0-incubating.html</guid><description>大家好，
+在这个版本中，Kyuubi 支持最新的 Spark 3.2，Z-Order 优化 sql 查询，无需提供 principal 和 keytab 的长时间运行的 SQL 引擎，支持 mysql 协议前端和 mysql 客户端。 其他主要更新包括 GROUP 引擎共享级别的支持、支持异步打开会话、用户友好的 kyuubi beeline 和 zookeeper 身份验证增强。
+要下载 Apache Kyuubi (Incubating) 1.4.0-incubating，请访问 下载页面。
+重大更新 使用最新的 Spark 3.2 进行了全面验证
+支持Z-Order优化SQL
+支持长时间运行的 SQL 引擎，无需提供 principal 和 keytab
+支持 GROUP 引擎共享级别
+增强 USER 引擎共享级别，支持引擎池
+增强 zookeeper 身份验证和 ACL
+添加更多 Kyuubi 自定义的函数
+对所有数据湖平台 Delta Lake、Iceberg 和 Hudi 进行全面测试
+同时支持 KERBEROS 和 PLAIN 认证
+支持 MySQL 协议前端和 MySQL 客户端（实验性质）</description></item><item><title>Apache Kyuubi(Incubating) 1.3.1-incubating 发布记录</title><link>https://kyuubi.apache.org/zh/release/1.3.1-incubating.html</link><pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.3.1-incubating.html</guid><description>大家好，
+Apache Kyuubi (Incubating) 1.3.1-incubating 现已发布。这是一个包含基于 branch-1.3 的稳定性修复的维护版本。主要修复事件日志的一些问题。
+Apache Kyuubi (Incubating) 是一个用于大规模数据处理和分析的分布式多租户 JDBC 服务，构建在 Apache Spark 之上，旨在支持更多引擎（如 Apache Flink）。请参考 Apache Kyuubi (Incubating) 了解更多。
+要下载 Apache Kyuubi (Incubating) 1.3.1-incubating，请访问 下载页面。
+重大更新 [KYUUBI #1190] Enhance error log detection in case lost the exception log
+[KYUUBI #1067] Catch exception if logRoot is not exist
+[KYUUBI #884] [FOLLOWUP] Fix catalog in KyuubiDatabaseMetaData#getTables
+[KYUUBI #1108] Register KyuubiDriver in ServiceLoader</description></item><item><title>Apache Kyuubi(Incubating) 1.3.0-incubating 发布记录</title><link>https://kyuubi.apache.org/zh/release/1.3.0-incubating.html</link><pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.3.0-incubating.html</guid><description>要下载 Apache Kyuubi (Incubating) 1.3.0-incubating，请访问 下载页面。
+重大更新 完全验证，支持最新的 Spark 3.0/3.1
+支持在 JDK8（默认）、JDK11 上构建
+在 Kyuubi Spark Extensions 中提供增强的 AQE（适用于 Spark 3.1）
+提供几个辅助 SQL 函数作为 Spark 内置函数的补充
+Spark on Kubernetes 的主要改进，包括文档、集成测试、工具等
+支持引擎/会话级别可配置的初始化 SQL 语句
+支持自定义认证实现
+支持通过 Web UI 停止 Spark 引擎
+支持单会话模式
+可观察性的几项改进
+对数据湖平台 Delta、Iceberg 进行全面测试
+对 MiniYARNCluster 进行全面测试</description></item></channel></rss>

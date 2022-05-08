@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Kyuubi</title><link>https://kyuubi.apache.org/zh/</link><description>Recent content on Apache Kyuubi</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Copyright © 2021-{year}</copyright><lastBuildDate>Thu, 21 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kyuubi.apache.org/zh/index.xml" rel="self" type="application/rss+xml"/><item><title>Apache Kyuubi(Incubating) 1.5.1-incubating 发布</title><link>https://kyuubi.apache.org/zh/news/2022-04-21-release-1.5.1-incubating.html</link><pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2022-04-21-release-1.5.1-incubating.html</guid><description>我们很高兴地宣布 Apache Kyuubi(Incubating) 1.5.1-incubating 发布了! 查看 发布记录 阅读有关新功能的信息，或者马上 下载 体验吧。</description></item><item><title>发布记录 - 1.5.1-incubating</title><link>https://kyuubi.apache.org/zh/release/1.5.1-incubating.html</link><pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.5.1-incubating.html</guid><description>更改列表 [KYUUBI #2354] Fix NPE in process builder log capture thread [KYUUBI #2296] Fix operation log file handler leak [KYUUBI #2266] The default value of frontend.connection.url.use.hostname should be set to true to be consistent with previous versions [KYUUBI #2255]The engine state of Spark&amp;rsquo;s EngineEvent is hardcoded with 0 [KYUUBI #2008][FOLLOWUP] Support engine type and subdomain in kyuubi-ctl [KYUUBI #2156][FOLLOWUP] Fix configuration format in document [KYUUBI #2156] Change log to reflect exactly why getting token failed [KYUUBI #2134] Respect Spark bundled log4j in extension modules [KYUUBI #2150] [DOCS] Fix Getting Started With Kyuubi on Kubernetes 致谢 最后但同样重要的是，如果没有以下贡献者，该版本是不可能发布的：</description></item><item><title>新的 Committer: Nicholas Jiang 和 Fu Chen</title><link>https://kyuubi.apache.org/zh/news/2022-03-29-new-committers.html</link><pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2022-03-29-new-committers.html</guid><description>Apache Kyuubi 的 Podling 项目管理委员会 (PMC) 已邀请 Nicholas Jiang 和 Fu Chen 成为我们的Committer，我们很高兴地宣布他们都接受了。
+Nicholas 一直在 Kyuubi 社区的多个领域工作，尤其是在 Flink SQL 引擎方面，他在 Kyuubi Flink SQL 引擎的实施、推广和问答方面发挥着重要作用。
+Fu 在 6 个月内持续为 Kyuubi 的多个模块做出贡献，包括 Spark 引擎、Spark 引擎扩展、Kyuubi server restful api 和 Kyuubi 的基础设施。 他还帮助在社区中积极审查其他开发人员的PR。
+让我们一起祝贺 Nicholas 和 Fu！
+成为 Committer 可以更轻松地为项目做出贡献，因为不需要通过补丁提交过程，这能够提高生产力。 PPMC 成员帮助管理和指导项目的方向。</description></item><item><title>Apache Kyuubi(Incubating) 1.5.0-incubating 发布</title><link>https://kyuubi.apache.org/zh/news/2022-03-25-release-1.5.0-incubating.html</link><pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2022-03-25-release-1.5.0-incubating.html</guid><description>我们很高兴地宣布 Apache Kyuubi(Incubating) 1.5.0-incubating 发布了! 查看 发布记录 阅读有关新功能的信息，或者马上 下载 体验吧。</description></item><item><title>发布记录 - 1.5.0-incubating</title><link>https://kyuubi.apache.org/zh/release/1.5.0-incubating.html</link><pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.5.0-incubating.html</guid><description>重大更新 支持 Flink SQL 引擎 (Beta) 支持 Trino/ Presto 引擎 (Beta) 支持为 Spark SQL 引擎运行 Scala 将 Hive 服务 RPC 协议升级到 3.1.2 引擎启动过程默认切换到异步 将 Session Conf Provider 添加为 Developer API 正确性 - 修复 Spark SQL 的浮点精度损失 从 log4j1 迁移到 log4j2 更改列表 [KYUUBI #1936][FOLLOWUP] Send credentials when opening session and wait for completion [KYUUBI #2115][1.5] Update license and enhance collect_licenses script [KYUUBI #2125] closeSession should avoid sending RPC after openSession fails [KYUUBI #2103] [1.</description></item><item><title>Apache Kyuubi(Incubating) 1.4.1-incubating 发布记录</title><link>https://kyuubi.apache.org/zh/release/1.4.1-incubating.html</link><pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.4.1-incubating.html</guid><description>大家好，
+Apache Kyuubi (Incubating) 1.4.1-incubating 现已发布。它是一个维护版本，包含基于 branch-1.4 的稳定性修复。主要修复事件日志的一些问题。
+Apache Kyuubi (Incubating) 是一个用于大规模数据处理和分析的分布式多租户 JDBC 服务，构建在 Apache Spark 之上，旨在支持更多引擎（如 Apache Flink）。请参考 Apache Kyuubi (Incubating) 了解更多。
+要下载 Apache Kyuubi (Incubating) 1.4.1-incubating，请访问 downloads page.
+重大更新 [KYUUBI #1449] Fix when KyuubiServer initialize fail but not exit
+[KYUUBI #1458] Delta lake table columns won&amp;rsquo;t show up in DBeaver.
+[KYUUBI #1473] Exit gracefully when engine idle
+[KYUUBI #1567] Expose HADOOP_CONF_DIR to Kyuubi beeline to fix &amp;ldquo;GSS initiate failed&amp;rdquo; error</description></item><item><title>Apache Kyuubi(Incubating) 1.4.1-incubating 发布</title><link>https://kyuubi.apache.org/zh/news/2022-01-31-release-1.4.1-incubating.html</link><pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2022-01-31-release-1.4.1-incubating.html</guid><description>我们很高兴地宣布 Apache Kyuubi(Incubating) 1.4.1-incubating 发布了! 查看 发布记录 阅读有关新功能的信息，或者马上 下载 体验吧。</description></item><item><title>新的 Committer: Dongdong Hong 和 Vino Yang</title><link>https://kyuubi.apache.org/zh/news/2021-12-25-new-committers.html</link><pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2021-12-25-new-committers.html</guid><description>Apache Kyuubi 的 Podling 项目管理委员会 (PMC) 已邀请 Dongdong Hong 和 Vino Yang(yanghua) 成为我们的Committer，我们很高兴地宣布他们都接受了。
+Dongdong 一直积极帮助在 Kubernetes 上部署 Kyuubi，致力于 Trino/Presto 引擎支持并编写高质量的补丁。
+Vino 一直积极为 Kyuubi FE 构建 REST API，目前专注于 Flink SQL 引擎。他还为帮助我们建立社区付出了很多努力。
+让我们一起祝贺 Dongdong 和 Vino！
+成为 Committer 可以更轻松地为项目做出贡献，因为不需要通过补丁提交过程，这能够提高生产力。 PPMC 成员帮助管理和指导项目的方向。</description></item><item><title>Apache Kyuubi(Incubating) 1.4.0-incubating 发布</title><link>https://kyuubi.apache.org/zh/news/2021-12-10-release-1.4.0-incubating.html</link><pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2021-12-10-release-1.4.0-incubating.html</guid><description>我们很高兴地宣布 Apache Kyuubi(Incubating) 1.4.0-incubating 发布了! 查看 发布记录 阅读有关新功能的信息，或者马上 下载 体验吧。</description></item><item><title>Apache Kyuubi(Incubating) 1.4.0-incubating 发布记录</title><link>https://kyuubi.apache.org/zh/release/1.4.0-incubating.html</link><pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.4.0-incubating.html</guid><description>大家好，
+在这个版本中，Kyuubi 支持最新的 Spark 3.2，Z-Order 优化 sql 查询，无需提供 principal 和 keytab 的长时间运行的 SQL 引擎，支持 mysql 协议前端和 mysql 客户端。 其他主要更新包括 GROUP 引擎共享级别的支持、支持异步打开会话、用户友好的 kyuubi beeline 和 zookeeper 身份验证增强。
+要下载 Apache Kyuubi (Incubating) 1.4.0-incubating，请访问 下载页面。
+重大更新 使用最新的 Spark 3.2 进行了全面验证
+支持Z-Order优化SQL
+支持长时间运行的 SQL 引擎，无需提供 principal 和 keytab
+支持 GROUP 引擎共享级别
+增强 USER 引擎共享级别，支持引擎池
+增强 zookeeper 身份验证和 ACL
+添加更多 Kyuubi 自定义的函数
+对所有数据湖平台 Delta Lake、Iceberg 和 Hudi 进行全面测试
+同时支持 KERBEROS 和 PLAIN 认证
+支持 MySQL 协议前端和 MySQL 客户端（实验性质）</description></item><item><title>Apache Kyuubi(Incubating) 1.3.1-incubating 发布</title><link>https://kyuubi.apache.org/zh/news/2021-10-25-release-1.3.1-incubating.html</link><pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2021-10-25-release-1.3.1-incubating.html</guid><description>我们很高兴地宣布 Apache Kyuubi(Incubating) 1.3.1-incubating 发布了! 查看 发布记录 阅读有关新功能的信息，或者马上 下载 体验吧。</description></item><item><title>Apache Kyuubi(Incubating) 1.3.1-incubating 发布记录</title><link>https://kyuubi.apache.org/zh/release/1.3.1-incubating.html</link><pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.3.1-incubating.html</guid><description>大家好，
+Apache Kyuubi (Incubating) 1.3.1-incubating 现已发布。这是一个包含基于 branch-1.3 的稳定性修复的维护版本。主要修复事件日志的一些问题。
+Apache Kyuubi (Incubating) 是一个用于大规模数据处理和分析的分布式多租户 JDBC 服务，构建在 Apache Spark 之上，旨在支持更多引擎（如 Apache Flink）。请参考 Apache Kyuubi (Incubating) 了解更多。
+要下载 Apache Kyuubi (Incubating) 1.3.1-incubating，请访问 下载页面。
+重大更新 [KYUUBI #1190] Enhance error log detection in case lost the exception log
+[KYUUBI #1067] Catch exception if logRoot is not exist
+[KYUUBI #884] [FOLLOWUP] Fix catalog in KyuubiDatabaseMetaData#getTables
+[KYUUBI #1108] Register KyuubiDriver in ServiceLoader</description></item><item><title>Apache Kyuubi(Incubating) 1.3.0-incubating 发布</title><link>https://kyuubi.apache.org/zh/news/2021-09-14-release-1.3.0-incubating.html</link><pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2021-09-14-release-1.3.0-incubating.html</guid><description>我们很高兴地宣布 Apache Kyuubi(Incubating) 1.3.0-incubating 发布了! 查看 发布记录 阅读有关新功能的信息, 或者马上 下载 体验吧。</description></item><item><title>Apache Kyuubi(Incubating) 1.3.0-incubating 发布记录</title><link>https://kyuubi.apache.org/zh/release/1.3.0-incubating.html</link><pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/release/1.3.0-incubating.html</guid><description>要下载 Apache Kyuubi (Incubating) 1.3.0-incubating，请访问 下载页面。
+重大更新 完全验证，支持最新的 Spark 3.0/3.1
+支持在 JDK8（默认）、JDK11 上构建
+在 Kyuubi Spark Extensions 中提供增强的 AQE（适用于 Spark 3.1）
+提供几个辅助 SQL 函数作为 Spark 内置函数的补充
+Spark on Kubernetes 的主要改进，包括文档、集成测试、工具等
+支持引擎/会话级别可配置的初始化 SQL 语句
+支持自定义认证实现
+支持通过 Web UI 停止 Spark 引擎
+支持单会话模式
+可观察性的几项改进
+对数据湖平台 Delta、Iceberg 进行全面测试
+对 MiniYARNCluster 进行全面测试</description></item><item><title>Kyuubi 进入 Apache 孵化器</title><link>https://kyuubi.apache.org/zh/news/2021-06-21-accept-incubator.html</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2021-06-21-accept-incubator.html</guid><description>Kyuubi 正式进入 Apache 孵化器, 详见 incubation status.</description></item><item><title>Apache Kyuubi 发布</title><link>https://kyuubi.apache.org/zh/releases.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/releases.html</guid><description>License The software licensed under Apache License 2.0.</description></item><item><title>Kyuubi 改进提案 (KPIP)</title><link>https://kyuubi.apache.org/zh/improvement-proposals.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/improvement-proposals.html</guid><description>KPIP 的目的是在整个开发过程中通知用户社区并让用户社区参与对 Kyuubi 代码库的重大改进，以增加用户需求。
+KPIP 应该用于重大的面向用户或跨领域的更改，而不是小的增量改进。如有疑问，Committer 认为这个更改需要 KPIP，那它确实需要。
+什么是 KPIP? KPIP 类似于产品管理中常用的产品需求文档。
+一个 KPIP:
+是一张标有“KPIP”的票，提议对 Kyuubi 进行重大改进或改变 遵循下面定义的模板 包括关于提案的票证的讨论 谁? 任何社区成员都可以通过讨论一个 KPIP 是否可能满足他们的需求或者提出一个 KPIP 来提供帮助。
+Contributors可以通过讨论 KPIP 在技术上是否可行来提供帮助。
+Committer可以通过讨论 KPIP 是否符合项目的长期目标以及引导 KPIP 来提供帮助。
+KPIP 作者 是任何创作 KPIP 并致力于在整个过程中推动变革的社区成员。 KPIP 的作者身份可以转让。
+KPIP Shepherd 是 PMC 成员，致力于在整个过程中引导提议的变更。虽然 Shepherd 可以在开发过程中委托或与其他 Committer 合作，但 Shepherd 最终对 KPIP 的成功或失败负责。Shepherd 的职责包括但不限于：
+成为提议变革的倡导者 帮助推进设计并在关键利益相关者之间达成共识 审查代码更改，确保更改符合项目标准 从用户那里获得反馈并迭代设计和实现 维护变更的质量，包括在发布之前验证变更是否满足 KPIP 的目标以及是否存在关键的错误 KPIP 流程 提出一个 KPIP 任何人都可以使用下面的文档模板提出 KPIP。请仅在你愿意提供帮助的情况下提交 KPIP，至少要与讨论有关。</description></item><item><title>Kyuubi 版本控制</title><link>https://kyuubi.apache.org/zh/version_control.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/version_control.html</guid><description>Overview Kyuubi 源代码位于 Apache git 存储库中，可从此处获得： https://gitbox.apache.org/repos/asf?p=incubator-kyuubi.git
+更改也反映到 github 存储库： https://github.com/apache/incubator-kyuubi</description></item><item><title>加入邮件列表</title><link>https://kyuubi.apache.org/zh/mailing_lists.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/mailing_lists.html</guid><description>Kyuubi 开发者邮件列表是你在使用 Kyuubi 时解决所有问题的首选方式，它将你的疑问推送至整个社区。这是与社区保持同步的最佳方式。
+在你向邮件列表发布任何内容之前，请确保你已经订阅了它们。下表列出了当前可用的邮件列表。
+名称 地址 订阅 取消订阅 Archive 用途 开发者列表 dev@kyuubi.apache.org subscribe unsubscribe archive 使用此列表解决你的 Kyuubi 问题由 Kyuubi 贡献者用来讨论 Kyuubi 的开发 提交列表 commits@kyuubi.apache.org subscribe unsubscribe archive Kyuubi 代码库变更通知 通知列表 notifications@kyuubi.apache.org subscribe unsubscribe archive 同步讨论发生在 Github 上的问题和 PR 订阅步骤 发送订阅电子邮件也很简单。步骤如下：
+订阅: 点击上表中 subscribe 的按钮，它会重定向到你的邮件客户端。发送邮件的主题和内容是任意的。 之后，你会收到一封来自 dev-help@kyuubi.apache.org 的确认邮件（如果没有收到，请确认邮件是否被自动归类为垃圾邮件、促销邮件、订阅邮件等）。 确认: 直接回复确认邮件，或点击邮件中的链接快速回复。主题和内容是任意的。 欢迎: 完成上述步骤后，你将收到一封邮件，主题为 WELCOME to dev@kyuubi.</description></item><item><title>当前的 Committer</title><link>https://kyuubi.apache.org/zh/become_committer.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/become_committer.html</guid><description>Name Akira Ajisaka Cheng Pan Dongdong Hong Duo Zhang Fei Wang Fu Chen Hongxiang Jiang Jeff Zhang Kent Yao Nicholas Jiang Vino Yang Willem Ning Jiang Xiduo You 任何支持社区并在任何 CoPDoC 领域工作的人都可以成为 Apache Kyuubi Committer。 CoPDoC 是首字母的缩写词，用于描述我们如何识别你的贡献，而不仅仅是通过代码。
+Community - 你可以通过我们的邮件列表、问题跟踪器、讨论页面加入我们，与社区成员互动，分享愿景和知识 Project - 需要清晰的愿景和共识 Documentation - 没有文档，这些东西只会留在作者的脑海中 Code - 没有代码，讨论就无从谈起 Apache Kyuubi 社区努力做到精英管理。 因此，一旦有人对 CoPDoC 的任何领域做出了充分贡献，他们就可以成为 committer-ship 的候选人，并最终投票成为 Kyuubi Committer。 作为 Apache Kyuubi Committer 并不一定意味着你必须以你的提交权限将代码提交到代码库； 这意味着你致力于 Kyuubi 项目，并为我们社区的成功做出卓有成效的贡献。</description></item><item><title>提交PR指南</title><link>https://kyuubi.apache.org/zh/pull_request.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/pull_request.html</guid><description>审查 PR Kyuubi 鼓励帮助审查其他开发人员的PR，这可以使得代码更加健壮。 审核指南可以查看 Google’s Engineering Practices documentation.
+提交你的PR 在这之前 在开始之前，最好先搜索问题和PR请求的历史记录，因为该问题可能已经被讨论过了。
+检查后，可以新建一个 issue 来描述想要做什么，关于 issue，我们有丰富的类型可以选择, 看 这里.
+然后在PR中提交你的代码。如果你是新的贡献者，请按照本指南逐步了解设置开发环境和做出你的第一个贡献。
+# 1. Fork GitHub 上的 Kyuubi 存储库 # 访问 &amp;#39;https://github.com/apache/incubator-kyuubi&amp;#39; 然后点击 &amp;#39;Fork&amp;#39; ，Fork到你的代码仓库 # 2. 使用下面的git命令克隆代码到本地 git clone https://github.com/${你的Github用户名}/incubator-kyuubi.git cd incubator-kyuubi # 3. 添加 git 远程仓库 git remote add origin https://github.com/${你的Github用户名}/incubator-kyuubi.git git remote add apache https://github.com/apache/incubator-kyuubi.git # 4. 设置你的github名字和邮箱 git config user.name &amp;#34;${你的Github用户名}&amp;#34; git config user.email &amp;#34;${你的公开邮箱}&amp;#34; # 5. 创建一个新分支 git checkout -b ${分支名称} # 6.</description></item><item><title>新晋 Committer 的流程</title><link>https://kyuubi.apache.org/zh/new_committer_process.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/new_committer_process.html</guid><description>本指南基于 apache newcommitter
+新晋 Committer 的流程 在 private@kyuubi.apache.org 中发起投票 见下文 Committer 投票模板
+关闭投票 见下文 关闭投票模板
+如果结果是肯定的，则邀请成为 Committer 见下文 Committer 邀请模板
+如果接受，然后: 接受成为 Committer 见下文 Committer 接受模板
+等到我们看到记录了 CLA 的收据 请求创建 Committer 帐户 见下文 Committer 帐户创建
+等待 root 说完成 PMC 主席启用 svn 和其他访问权限 将 Committer 添加到 JIRA 和 CWiki 中的相应组 通知 Committer 完成 见下文 Committer 完成模板
+模板 请注意，模板中的三个占位符在使用前应替换
+NEW_COMMITTER_NAME NEW_COMMITTER_EMAIL NEW_COMMITTER_APACHE_NAME Committer 投票模板 To: private@kyuubi.apache.org Subject: [VOTE] New committer: ${NEW_COMMITTER_NAME} Hi Kyuubi PPMC, This is a formal vote about inviting ${NEW_COMMITTER_NAME} as our new committer.</description></item><item><title>最新消息</title><link>https://kyuubi.apache.org/zh/project_history.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/project_history.html</guid><description>License The software licensed under Apache License 2.0.</description></item><item><title>有用的开发者工具</title><link>https://kyuubi.apache.org/zh/developer-tools.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/developer-tools.html</guid><description>构建 Kyuubi 使用 Apache Maven 构建 Kyuubi Kyuubi 是基于 Apache Maven 构建的，使用命令：
+./build/mvn clean package -DskipTests 这会构建 Kyuubi 项目的所有子模块而无需运行任何单元测试。
+如果要手动测试，可以直接在 Kyuubi 项目的根目录下运行 Kyuubi 启动：
+bin/kyuubi start 单独构建子模块 例如，构建 Kyuubi Common 模块，可以使用命令:
+build/mvn clean package -pl :kyuubi-common -DskipTests 单独构建多个子模块 例如，使用构建 Kyuubi Common、Kyuubi Ha 模块，可以使用命令:
+build/mvn clean package -pl :kyuubi-common,:kyuubi-ha -DskipTests 跳过一些模块 例如，构建没有 Kyuubi Codecov 和 Assembly 模块，可以使用命令:
+mvn clean install -pl '!:kyuubi-codecov,!:kyuubi-assembly' -DskipTests 针对不同的 Apache Spark 版本构建 Kyuubi 从 v1.1.0 开始，Kyuubi 可以支持使用不同的 Spark 配置文件构建：</description></item><item><title>问题追踪</title><link>https://kyuubi.apache.org/zh/issue_tracking.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/issue_tracking.html</guid><description>Kyuubi 社区使用 Github Issues 来跟踪各种想法、工作、bug等。 与我们的 存储库 集成的 Github Issues 可以更轻松地组织工作、专注于基本任务并同时更新计划。
+尽管只要有 Github 帐户，就可以创建创建包含任何内容的问题，并且我们不对本部分的功能进行任何强制限制，但所有交流均需遵守 ASF 行为准则。 如果你发现有违反这些规则的行为，可参照 ASF 报告指南 处理。
+如何使用 Github Issues 本节不包含 Github 问题本身的任何特定功能，你可以从 Github 的文档中快速学习。
+First Good Issue 带有 good first issue 标签的问题，是首次贡献者开始贡献 Kyuubi 的绝佳方式。 点击 这里 你将获得完整的列表。
+报告 Bug 你报告的内容是否是一个bug并不重要。请随时与社区分享你遇到的问题。
+对于最佳实践，如果确实是错误的，请尝试提供可重现的步骤。
+如果错误的报告中有关于如何引入错误、提交或版本等详细的描述那再好不过了，因为这对审查者理解错误非常有帮助。
+使用我们的 Bug问题模板 并填写尽可能多的信息。
+提交想法或功能请求 作为一个志愿者驱动的项目，想法总是受欢迎的 ;)
+使用 feature模板 让你的建议清晰易懂：
+详细解释它是如何工作的 尽可能缩小范围以使得它更易于实施 对于大型的功能或是代码库的重大更改，你可能需要创建一个 Kyuubi Project Improvement Proposal.
+Bug 修复 对于标记为 bug 的问题，对任何想要修复它的人都是开放的。
+实现功能 对于标记为 feature 的问题，对任何想要实现它的人都是开放的。</description></item></channel></rss>
