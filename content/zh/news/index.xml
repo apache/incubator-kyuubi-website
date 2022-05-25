@@ -2,6 +2,12 @@
 Nicholas 一直在 Kyuubi 社区的多个领域工作，尤其是在 Flink SQL 引擎方面，他在 Kyuubi Flink SQL 引擎的实施、推广和问答方面发挥着重要作用。
 Fu 在 6 个月内持续为 Kyuubi 的多个模块做出贡献，包括 Spark 引擎、Spark 引擎扩展、Kyuubi server restful api 和 Kyuubi 的基础设施。 他还帮助在社区中积极审查其他开发人员的PR。
 让我们一起祝贺 Nicholas 和 Fu！
+成为 Committer 可以更轻松地为项目做出贡献，因为不需要通过补丁提交过程，这能够提高生产力。 PPMC 成员帮助管理和指导项目的方向。</description></item><item><title>新的 Committer: Zhen Wang</title><link>https://kyuubi.apache.org/zh/news/2022-05-24-new-committers.html</link><pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2022-05-24-new-committers.html</guid><description>Apache Kyuubi 的 Podling 项目管理委员会 (PMC) 已邀请 Zhen Wang 成为我们的Committer，我们很高兴地宣布他已经接受邀请。
+Zhen 在 6 个月内持续为 Kyuubi 的多个模块做出贡献，包括Kyuubi server 和 Spark SQL Engine。
+他为Kyuubi server做的改进。
+为 kyuubi server增加了连接并发限制. 在服务发现模块中支持 Zookeeper digest 认证模式 优化孤儿引擎相关问题 他对 Spark SQL 引擎所做的功能和增强：
+实现 Spark history server Kyuubi 标签页 实现了 Spark SQL 语句的执行进度 支持 Spark SQL 引擎的single session模式 参与了引擎池的讨论和优化。 他还帮助在社区中积极审查其他开发人员的PR。
+让我们一起祝贺 Zhen！
 成为 Committer 可以更轻松地为项目做出贡献，因为不需要通过补丁提交过程，这能够提高生产力。 PPMC 成员帮助管理和指导项目的方向。</description></item><item><title>Apache Kyuubi(Incubating) 1.5.0-incubating 发布</title><link>https://kyuubi.apache.org/zh/news/2022-03-25-release-1.5.0-incubating.html</link><pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2022-03-25-release-1.5.0-incubating.html</guid><description>我们很高兴地宣布 Apache Kyuubi(Incubating) 1.5.0-incubating 发布了! 查看 发布记录 阅读有关新功能的信息，或者马上 下载 体验吧。</description></item><item><title>Apache Kyuubi(Incubating) 1.4.1-incubating 发布</title><link>https://kyuubi.apache.org/zh/news/2022-01-31-release-1.4.1-incubating.html</link><pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2022-01-31-release-1.4.1-incubating.html</guid><description>我们很高兴地宣布 Apache Kyuubi(Incubating) 1.4.1-incubating 发布了! 查看 发布记录 阅读有关新功能的信息，或者马上 下载 体验吧。</description></item><item><title>新的 Committer: Dongdong Hong 和 Vino Yang</title><link>https://kyuubi.apache.org/zh/news/2021-12-25-new-committers.html</link><pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate><guid>https://kyuubi.apache.org/zh/news/2021-12-25-new-committers.html</guid><description>Apache Kyuubi 的 Podling 项目管理委员会 (PMC) 已邀请 Dongdong Hong 和 Vino Yang(yanghua) 成为我们的Committer，我们很高兴地宣布他们都接受了。
 Dongdong 一直积极帮助在 Kubernetes 上部署 Kyuubi，致力于 Trino/Presto 引擎支持并编写高质量的补丁。
 Vino 一直积极为 Kyuubi FE 构建 REST API，目前专注于 Flink SQL 引擎。他还为帮助我们建立社区付出了很多努力。
