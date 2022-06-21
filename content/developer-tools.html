@@ -263,30 +263,34 @@ Apache Software Foundation
 <p>By default, we use <code>https://archive.apache.org/dist/spark/</code> to download the built-in Spark release package,
 but if you find it hard to reach, or the downloading speed is too slow, you can define the <code>spark.archive.mirror</code>
 property to a suitable Apache mirror site. For instance,</p>
-<pre><code>build/mvn clean package -Dspark.archive.mirror=https://mirrors.bfsu.edu.cn/apache/spark/spark-3.0.1
+<pre><code>build/mvn clean package -Dspark.archive.mirror=https://mirrors.bfsu.edu.cn/apache/spark/spark-3.2.1
 </code></pre><p>Visit <a href="http://www.apache.org/mirrors/">Apache Mirrors</a> and choose a mirror based on your region.</p>
-<p>Specifically for developers in China mainland, you can use the pre-defined profile named <code>mirror-cn</code> which use
+<p>Specifically for developers in China mainland, you can use the pre-defined profile named <code>mirror-cdn</code> which use
 <code>mirrors.bfsu.edu.cn</code> to speed up Spark Binary downloading. For instance,</p>
 <pre><code>build/mvn clean package -Pmirror-cn
 </code></pre><h2 id="building-a-runnable-distribution">Building a Runnable Distribution</h2>
 <p>To create a Kyuubi distribution like those distributed by <a href="https://github.com/apache/incubaotr-kyuubi/releases">Kyuubi Release Page</a>,
 and that is laid out so as to be runnable, use <code>./build/dist</code> in the project root directory.</p>
 <p>For more information on usage, run <code>./build/dist --help</code></p>
-<pre><code class="language-logtalk" data-lang="logtalk">./build/dist - Tool for making binary distributions of Kyuubi Server
+<pre><code class="language-logtalk" data-lang="logtalk">./build/dist - Tool for making binary distributions of Kyuubi
 
 Usage:
-+--------------------------------------------------------------------------------------+
-| ./build/dist [--name &lt;custom_name&gt;] [--tgz] [--spark-provided] &lt;maven build options&gt; |
-+--------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+| ./build/dist [--name &lt;custom_name&gt;] [--tgz] [--flink-provided] [--spark-provided] [--hive-provided]  |
+|              [--mvn &lt;maven_executable&gt;] &lt;maven build options&gt;                                        |
++------------------------------------------------------------------------------------------------------+
 name:           -  custom binary name, using project version if undefined
 tgz:            -  whether to make a whole bundled package
+flink-provided: -  whether to make a package without Flink binary
 spark-provided: -  whether to make a package without Spark binary
+hive-provided:  -  whether to make a package without Hive binary
+mvn:            -  external maven executable location
 </code></pre><p>For instance,</p>
 <pre><code>./build/dist --name custom-name --tgz
 </code></pre><p>This results a Kyuubi distribution named <code>kyuubi-{version}-bin-custom-name.tar.gz</code> for you.</p>
 <p>If you are planing to deploy Kyuubi where <code>spark</code> is provided, in other word, it&rsquo;s not required to bundle spark binary, use</p>
 <pre><code>./build/dist --tgz --spark-provided
-</code></pre><p>Then you will get a Kyuubi distribution without spark binary named <code>kyuubi-{version}-bin-without-spark.tar.gz</code>.</p>
+</code></pre><p>Then you will get a Kyuubi distribution without spark binary named <code>kyuubi-{version}-bin.tar.gz</code>.</p>
 <h2 id="building-kyuubi-documentation">Building Kyuubi Documentation</h2>
 <p>Follow the steps below and learn how to build the Kyuubi documentation as the one you are watching now.</p>
 <h3 id="install--activate-virtualenv">Install & Activate <code>virtualenv</code></h3>
@@ -317,7 +321,7 @@ please refer to the <a href="http://www.scalatest.org/user_guide/using_the_scala
 </code></pre><h3 id="running-tests-for-a-single-test">Running Tests for a Single Test</h3>
 <p>When developing locally, it’s convenient to run one single test, or a couple of tests, rather than all.</p>
 <p>With Maven, you can use the -DwildcardSuites flag to run individual Scala tests:</p>
-<pre><code>./build/mvn test -Dtest=none -DwildcardSuites=org.apache.kyuubi.service.FrontendServiceSuite
+<pre><code>./build/mvn install `test -Dtest=none -DwildcardSuites=org.apache.kyuubi.service.FrontendServiceSuite
 </code></pre><p>If you want to make a single test that need integrate with kyuubi-spark-sql-engine module, please build the package for kyuubi-spark-sql-engine module at first.</p>
 <p>You can leverage the ready-made tool for creating a binary distribution.</p>
 <pre><code>./build/dist
